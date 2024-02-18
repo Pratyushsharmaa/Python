@@ -3,9 +3,67 @@
 #List of words
 word_list = ["aardvark", "baboon", "camel"] 
 
+stages = ['''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+''']
+
 
 import random #choose a random word from the list
 chosen_word = random.choice(word_list)
+lives = 5
 
 print(f"Hello, the solution is {chosen_word}")
 display = [] #display blank char for each letter in the word
@@ -21,5 +79,12 @@ while "_" in display: #traverse until all letters are guessed
     letter = chosen_word[position]
     if letter == guess:
       display[position] = letter
+
+  if guess not in chosen_word:
+    lives -= 1
+    print(stages[lives])
+    if lives == 0:
+      print("You lose")
+      break
   
   print (display)
