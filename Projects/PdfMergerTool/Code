@@ -1,0 +1,26 @@
+from PyPDF2 import PdfMerger
+
+# Create a PdfMerger object
+merger = PdfMerger()
+
+# File paths for the PDFs you want to merge
+pdf_files = [
+    "/Users/pratyushsharma/Desktop/PDFS/PDF1.pdf",
+    "/Users/pratyushsharma/Desktop/PDFS/PDF2.pdf",
+    "/Users/pratyushsharma/Desktop/PDFS/PDF3.pdf"
+]
+
+# Iterate through all the PDF file paths and append them to the merger object
+for pdf in pdf_files:
+    merger.append(pdf)
+
+# Output path for the merged PDF
+output_path = "/Users/pratyushsharma/Desktop/PDFS/merged_output.pdf"
+
+# Write the merged PDF to the output path
+merger.write(output_path)
+
+# Close the PdfMerger object
+merger.close()
+
+print(f"Merged PDF created successfully at: {output_path}")
