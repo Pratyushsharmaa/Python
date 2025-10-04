@@ -1,0 +1,24 @@
+def next_greatest_letter(letters, target):
+    """
+    Return the smallest character in letters that is lexicographically greater than target.
+
+    Parameters:
+    letters (List[char]): Sorted array of characters.
+    target (char): The target character.
+
+    Returns:
+    char: The smallest character greater than target, or the first character if no such character exists.
+    """
+    # Implement the function logic
+    start, end = 0, len(letters)-1
+    
+    while start<=end:
+        mid = (start+end)//2
+        
+        if letters[mid]>target:
+            end = mid-1
+            
+        else:
+            start = mid+1 
+            
+    return letters[start%len(letters)]
