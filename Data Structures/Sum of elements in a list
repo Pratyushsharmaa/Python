@@ -1,0 +1,12 @@
+def sum_of_elements(lst):
+    """
+    Function to find the sum of all elements in the list.
+    :param lst: List[int] -> List of integers
+    :return: int -> The sum of all elements in the list
+    """
+    # TODO: Implement this function
+    sum = 0
+    for i in range(0,len(lst)):
+        sum += lst[i]
+        
+    return sum 
