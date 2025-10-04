@@ -1,0 +1,8 @@
+def linear_search(arr, target):
+    # TODO: Implement this function
+    size = len(arr)
+    for i in range(0,size):
+        if(arr[i]==target):
+            return i 
+    else:
+            return -1   
