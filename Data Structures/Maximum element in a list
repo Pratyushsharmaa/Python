@@ -1,0 +1,23 @@
+def find_max_element(lst):
+    """
+    Function to find the maximum element in a list.
+    :param lst: List[int] -> List of integers
+    :return: int -> The maximum element in the list
+    """
+    # TODO: Implement this function
+    
+    
+    if not lst:
+        return None
+        
+    max_element = lst[0]
+    
+    for i in range(1, len(lst)):
+        if lst[i]>max_element:
+            max_element = lst[i]
+            
+    return max_element
+            
+        
+        
+        
