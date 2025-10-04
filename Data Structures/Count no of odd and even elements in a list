@@ -1,0 +1,14 @@
+def count_even_odd(lst):
+    # Your code goes here
+    even_list_frequency = 0
+    odd_list_frequency = 0
+    
+    for num in lst:
+        if (num%2==0):
+            even_list_frequency+=1
+        else:
+            odd_list_frequency+=1 
+            
+    return(even_list_frequency,odd_list_frequency)
+            
+        
