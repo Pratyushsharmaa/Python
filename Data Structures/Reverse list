@@ -1,0 +1,18 @@
+def reverse_list(lst):
+    """
+    Function to reverse the order of elements in a list.
+    :param lst: List[int] -> List of integers
+    :return: List[int] -> The list with elements in reversed order
+    """
+    
+    i, j = 0, len(lst)-1
+    
+    while i<j:
+        lst[i], lst[j] = lst[j], lst[i]
+        
+        i +=1 
+        j -=1 
+        
+    return lst
+    
+        
