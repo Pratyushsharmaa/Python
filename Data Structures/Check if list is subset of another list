@@ -1,0 +1,6 @@
+def is_subset(lst1, lst2):
+    # Your code goes here
+    for elem in lst1:
+        if elem not in lst2:
+            return False
+    return True
