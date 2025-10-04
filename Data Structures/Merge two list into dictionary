@@ -1,0 +1,11 @@
+def merge_lists_to_dictionary(keys, values):
+    # Your code goes here
+    
+    if (len(keys)!=len(values)):
+        return False
+    dict = {}
+    
+    for i in range(min(len(keys),len(values))):
+        dict[keys[i]] = values[i]
+        
+    return dict
