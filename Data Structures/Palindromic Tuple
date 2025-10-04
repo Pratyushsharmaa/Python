@@ -1,0 +1,3 @@
+def is_palindromic_tuple(tup):
+    # Your code goes here
+    return tup==tup[::-1]
