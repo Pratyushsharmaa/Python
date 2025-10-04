@@ -1,0 +1,19 @@
+def is_palindrome(lst):
+    """
+    Function to check if a list is a palindrome.
+    :param lst: List[int] -> List of integers
+    :return: bool -> True if the list is a palindrome, False otherwise
+    """
+    # TODO: Implement this function
+    i, j = 0, len(lst)-1
+    while i<=j:
+        if lst[i]!=lst[j]:
+            return False
+        
+        i+=1 
+        j-=1 
+        
+        
+    return True
+        
+    
