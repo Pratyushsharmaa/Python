@@ -1,0 +1,11 @@
+def max_consecutive_difference(lst):
+    # Your code goes here
+    max_difference = 0
+    
+    for i in range(1,len(lst)):
+        diff = abs(lst[i]-lst[i-1])
+        
+        if diff>max_difference:
+            max_difference = diff
+            
+    return max_difference
