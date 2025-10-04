@@ -1,0 +1,7 @@
+def sum_list(numbers):
+    # Your code goes here
+    total = 0
+    for num in numbers:
+        total += num
+    return total
+
