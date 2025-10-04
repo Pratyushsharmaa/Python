@@ -1,0 +1,8 @@
+def remove_duplicates(lst):
+    # Your code goes here
+    unique_list = []
+    for num in lst:
+        if num not in unique_list:
+            unique_list.append(num)
+            
+    return unique_list
