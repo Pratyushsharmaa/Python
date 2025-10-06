@@ -1,0 +1,21 @@
+def longest_word_length(s):
+    """
+    Function to find the length of the longest word in a string without using built-in functions.
+    
+    Parameters:
+    s (str): The input string.
+    
+    Returns:
+    int: The length of the longest word.
+    """
+    # Your code here
+    words = s.split()
+    counter = 0
+    
+    for word in words:
+        if len(word)>counter:
+            counter = len(word)
+            
+        
+        
+    return counter
