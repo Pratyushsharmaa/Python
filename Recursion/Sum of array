@@ -1,0 +1,14 @@
+def recursive_sum(arr):
+    """
+    Function to calculate the sum of an array using recursion.
+    
+    Parameters:
+    arr (list of int): The array of integers.
+    
+    Returns:
+    int: The sum of the array elements.
+    """
+    # Your code here
+    if not arr:
+        return 0
+    return arr[0]+ recursive_sum(arr[1:])
