@@ -1,0 +1,20 @@
+def quick_sort(arr):
+    """
+    Function to perform quick sort on a list of integers using recursion.
+    
+    Parameters:
+    arr (list of int): The list to be sorted.
+    
+    Returns:
+    list of int: The sorted list.
+    """
+    # Your code here
+    if len(arr)<=1:
+        return arr 
+        
+    pivot = arr[-1]
+    
+    left = [x for x in arr[:-1] if x<= pivot]
+    right = [x for x in arr[:-1] if x> pivot]
+    
+    return quick_sort(left) + [pivot]+ quick_sort(right)
