@@ -1,0 +1,22 @@
+def binary_search_rec(lst, target, left, right):
+    """
+    Recursive binary search.
+    Returns index of target if found, else -1.
+    """
+    # Base Case: invalid range
+    if left > right:
+        return -1
+
+    mid = (left + right) // 2
+
+    # Found
+    if lst[mid] == target:
+        return mid
+
+    # Search left half
+    elif target < lst[mid]:
+        return binary_search_rec(lst, target, left, mid - 1)
+    
+    # Search right half
+    else:
+        return binary_search_rec(lst, target, mid + 1, right)
