@@ -1,0 +1,18 @@
+def is_palindrome(s):
+    """
+    Function to check if a string is a palindrome using recursion.
+    
+    Parameters:
+    s (str): The string to check.
+    
+    Returns:
+    bool: True if the string is a palindrome, False otherwise.
+    """
+    # Your code here
+    if len(s)<=1:
+        return True
+        
+    if s[0]!=s[-1]:
+        return False
+        
+    return is_palindrome(s[1:-1])
