@@ -1,0 +1,24 @@
+def subsequences(s):
+    """
+    Function to generate all subsequences of a string using recursion.
+    
+    Parameters:
+    s (str): The string to generate subsequences from.
+    
+    Returns:
+    list of str: A list containing all subsequences of the string.
+    """
+    # Your code here
+    if len(s)==0:
+        return [""]
+        
+    smaller_subseq = subsequences(s[1:])
+    
+    result = []
+    
+    for subseq in smaller_subseq:
+        result.append(subseq)
+        result.append(s[0]+subseq)
+        
+    return result
+        
